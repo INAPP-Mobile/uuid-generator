@@ -62,7 +62,7 @@ test.describe("UUID Generator — E2E", () => {
     await page.getByRole("button", { name: "Generate" }).click();
     await expect(page.locator("code").first()).toBeVisible({ timeout: 5000 });
 
-    await page.getByRole("button", { name: "Clear" }).click();
+    await page.getByRole("button", { name: "Clear", exact: true }).click();
     await expect(page.locator("code").first()).not.toBeVisible();
   });
 
