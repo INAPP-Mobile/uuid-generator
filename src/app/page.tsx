@@ -511,6 +511,8 @@ export default function Home() {
         </div>
       </div>
 
+      <ContentSection />
+
       <Script
         async
         src="https://www.googletagmanager.com/gtag/js?id=AW-971442831"
@@ -535,4 +537,29 @@ export default function Home() {
       />
     </main>
   );
+}
+
+function ContentSection() {
+  return (
+    <section className="max-w-3xl mx-auto mt-16 space-y-8 text-gray-300 text-sm leading-relaxed">
+      <div className="bg-gray-800/50 border border-gray-700/50 rounded-xl p-6 space-y-4">
+        <h2 className="text-lg font-semibold text-white">About This Tool</h2>
+        <p>Generate UUID v4 and v7 universally unique identifiers instantly. Supports single and bulk generation with auto-copy and history tracking for easy reuse.</p>
+        <h3 className="text-base font-semibold text-white">Common Use Cases</h3>
+        <ul className="list-disc pl-5 space-y-1">
+          <li>Generating unique database primary keys</li>
+          <li>Creating session IDs and correlation IDs for API requests</li>
+          <li>Generating unique identifiers for distributed systems</li>
+        </ul>
+        <h3 className="text-base font-semibold text-white">Pro Tips</h3>
+        <ul className="list-disc pl-5 space-y-1">
+          <li>UUID v7 is time-ordered, making it better for database indexing than v4</li>
+          <li>Use bulk mode to generate multiple UUIDs at once for seeding test data</li>
+        </ul>
+        <p className="text-gray-400 text-xs mt-4">
+          Need a hash or checksum? Try the <a href="https://hash.freeq.one" className="text-blue-400 hover:underline">Hash Generator</a>. Part of the <a href="https://freeq.one" className="text-blue-400 hover:underline">FreeQ.One</a> tools suite.
+        </p>
+      </div>
+    </section>
+  )
 }
